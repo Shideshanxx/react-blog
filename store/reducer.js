@@ -15,7 +15,7 @@ const defalutState = {
   ...apiLoading,
 };
 
-export default (state = defalutState, action) => {
+const reducer = (state = defalutState, action) => {
   if (action.type === "changeUserInfo") {
     let newState = JSON.parse(JSON.stringify(state));
     newState.userInfo = action.payload;
@@ -42,3 +42,5 @@ export default (state = defalutState, action) => {
 
   return state;
 };
+
+export default reducer

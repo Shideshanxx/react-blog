@@ -14,7 +14,6 @@ import IconFont from '@/components/IconFont'
 import './style.less'
 
 const MsgPage = (props) => {
-
 	const [tabKey, setTabKey] = useState(0)
 	const [bannerData, setBannerData] = useState(props.banner)
 	const [dataList, setDataList] = useState([])
@@ -119,11 +118,10 @@ const MsgPage = (props) => {
 
 			<>
 				<div className="banner">
-					<LazyImg background={true} params="?imageslim" src={bannerData && bannerData.url && bannerData.url} />
+					<LazyImg background={true} params="?imageslim" src={bannerData && bannerData.url} />
 				</div>
 
 				<Row className="msg-page">
-
 					{/* 这里分两份代码 pc 和移动 这样子最省事 */}
 					<Col xs={0} sm={0} md={0} lg={5} xl={5} className="left-nav-box" style={{ paddingRight: 24 }}>
 						<Affix offsetTop={68}>
@@ -197,7 +195,6 @@ const MsgPage = (props) => {
 }
 
 export async function getServerSideProps(context) {
-
 	const promise = new Promise((resolve) => {
 		request(serviceApi.getListBanner).then((res) => {
 			resolve(res.data[0])

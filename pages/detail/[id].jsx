@@ -36,7 +36,6 @@ const { Title } = Typography
 
 const Detail = (props) => {
   const [info, setInfo] = useState(props.articleInfo)
-  // const [banner, setBanner] = useState(props.banner)
   const [likeCount, setLikeCount] = useState(props.articleInfo.count)
   const [likeState, setLikeState] = useState(false)  // 按赞状态
   const [locationUrl, setLocationUrl] = useState('') // 文章链接
@@ -338,16 +337,9 @@ export async function getServerSideProps(context) {
     })
   })
 
-  const promise1 = new Promise((resolve) => {
-    request(serviceApi.getDetailBanner).then(res=>{
-      resolve(res.data[0])
-    })
-  })
-
   let articleInfo = await promise
-  let banner = await promise1
 
-  return {props: {articleInfo, banner}}
+  return {props: {articleInfo}}
 }
 
 const dispatchToProps = (dispatch) => {

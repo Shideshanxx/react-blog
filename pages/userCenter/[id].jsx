@@ -771,7 +771,6 @@ export async function getServerSideProps(context) {
   return { props: { userInfoData, articleTotalData, userArticleList } }
 }
 
-
 const stateToProps = (state) => {
   return {
     loginUserInfo: state.userInfo,
@@ -801,7 +800,6 @@ const dispatchToProps = (dispatch) => {
 
 const CenterForm = connect(stateToProps, dispatchToProps)(withRouter(UserCenter))
 export default CenterForm
-
 
 // 绑定手机form组件
 const BindMobieForm = (props) => {
@@ -862,8 +860,6 @@ const BindMobieForm = (props) => {
     </Modal>
   )
 };
-
-
 
 // 更改网易云歌单id组件
 const EditSongsForm = (props) => {

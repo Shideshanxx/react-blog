@@ -105,7 +105,7 @@ const SearchPage = (props) => {
 
 			<>
 				<div className="banner">
-					<LazyImg background={true} params="?imageslim" src={bannerData && bannerData.url && bannerData.url} />
+					<LazyImg background={true} params="?imageslim" src={bannerData && bannerData.url} />
 				</div>
 
 				<Row className="search-page">
@@ -231,7 +231,6 @@ const SearchPage = (props) => {
 }
 
 export async function getServerSideProps(context) {
-
 	const searchType = context.query.search[0];
 	const searchText = context.query.search[1] || ' ';
 	

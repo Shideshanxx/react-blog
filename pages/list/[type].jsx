@@ -18,7 +18,6 @@ import {
 import './style.less'
 
 const ListPage = (porps) => {
-
 	const [listData, setListData] = useState(porps.listData)
 	const [tabKey, setTabKey] = useState(porps.tabIndex)
 	const [bannerData, setBannerData] = useState(porps.banner)
@@ -203,7 +202,6 @@ const ListPage = (porps) => {
 }
 
 export async function getServerSideProps(context) {
-
 	// 广告
 	const promise1 = new Promise((resolve) => {
 		request(serviceApi.getAdvertList, {
