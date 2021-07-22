@@ -100,7 +100,7 @@ const SearchPage = (props) => {
 	return (
 		<>
 			<Head>
-				<title>挺哥博客-搜索列表</title>
+				<title>Asunarail_Blog-搜索列表</title>
 			</Head>
 
 			<>

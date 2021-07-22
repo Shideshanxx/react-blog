@@ -636,7 +636,7 @@ const UserCenter = (props) => {
                     <Card bordered={false}>
                       {
                         props.loginUserInfo && userInfo && ~~props.loginUserInfo.auth == ~~userInfo.auth ?
-                          <div className="ant-list-empty-text">ㄟ( ▔, ▔ )ㄏ 你还不是博主哦, 联系挺哥申请吧！</div>
+                          <div className="ant-list-empty-text">ㄟ( ▔, ▔ )ㄏ 你还不是博主哦, 联系站主申请吧！</div>
                           :
                           <div className="ant-list-empty-text">ㄟ( ▔, ▔ )ㄏ 该用户不是博主，没有发表过文章！</div>
                       }

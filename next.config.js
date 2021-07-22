@@ -29,7 +29,7 @@ module.exports = withLess(
     distDir: "build",
     generateEtags: false,
     generateBuildId: async () => {
-      return "tgbk-build"; // 'build-' + Date.now(); 这样会生成多个不一样的build文件可以当版本用 ，但是我不想要，影响我脚本上传七牛了， 我就要一个，写死
+      return "blog-build"; // 'build-' + Date.now(); 这样会生成多个不一样的build文件可以当版本用 ，但是我不想要，影响我脚本上传七牛了， 我就要一个，写死
     },
     // assetPrefix: isProd ? 'http://cdn.zjutshideshan.cn' : '', // build后静态文件加上前缀
     assetPrefix: "",

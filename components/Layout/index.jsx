@@ -25,11 +25,12 @@ const Layout = (props) => {
           <Side />
           {/* id 是歌单的id */}
           <Aplayer
-            id={
-              props.userInfo && props.userInfo.songsId
-                ? props.userInfo.songsId
-                : 705619441
-            }
+            // id={
+            //   props.userInfo && props.userInfo.songsId
+            //     ? props.userInfo.songsId
+            //     : 6654107223
+            // }
+            id={6654107223}
           />
         </div>
         <Footer />

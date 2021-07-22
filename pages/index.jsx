@@ -118,8 +118,8 @@ const Home = (props) => {
             <div className="header-banner">
               <LazyImg background={true} params="?imageslim" src={topBanner?.url || null} >
                 <div className="header-content">
-                  <a className="tips-text" href={topBanner?.link !== '无' ? topBanner.link : null} target="_blank">
-                    {topBanner?.title !== '无' ? topBanner.title : null}
+                  <a className="tips-text" href={topBanner?.link !== '无' ? topBanner?.link : null} target="_blank">
+                    {topBanner?.title !== '无' ? topBanner?.title : null}
                   </a>
                 </div>
               </LazyImg>

@@ -134,7 +134,7 @@ export const throttle = function (fn, delay) {
  * 加密（需要先加载lib/aes/aes.min.js文件）
  */
 export const encrypt = (word) => {
-  var key = CryptoJS.enc.Utf8.parse("0863285e15165b2c"); // '挺哥牛逼' md5后的十六位十六进制数作为密钥
+  var key = CryptoJS.enc.Utf8.parse("0863285e15165b2c"); // md5后的十六位十六进制数作为密钥
   var srcs = CryptoJS.enc.Utf8.parse(word);
   var encrypted = CryptoJS.AES.encrypt(srcs, key, {
     mode: CryptoJS.mode.ECB,
@@ -147,7 +147,7 @@ export const encrypt = (word) => {
  * 解密
  */
 export const decrypt = (word) => {
-  var key = CryptoJS.enc.Utf8.parse("0863285e15165b2c"); // '挺哥牛逼' md5后的十六位十六进制数作为密钥
+  var key = CryptoJS.enc.Utf8.parse("0863285e15165b2c"); // md5后的十六位十六进制数作为密钥
   var decrypt = CryptoJS.AES.decrypt(word, key, {
     mode: CryptoJS.mode.ECB,
     padding: CryptoJS.pad.Pkcs7,

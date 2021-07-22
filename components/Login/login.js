@@ -128,7 +128,7 @@ class Login extends React.Component {
               <a
                 onClick={() =>
                   message.warning(
-                    "忘记就忘记了，功能太多写不过来，联系挺哥重置吧！"
+                    "忘记就忘记了，功能太多写不过来，联系站主重置吧！"
                   )
                 }
                 className="login-form-forgot"

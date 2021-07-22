@@ -629,7 +629,7 @@ const Header = (props) => {
         <Drawer
           title={(
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              挺哥博客
+              Asunarail_Blog
               <IconFont
                 type={returnTheme()}
                 style={{ fontSize: 24, marginRight: 10 }}

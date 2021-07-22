@@ -140,7 +140,7 @@ const ListPage = (porps) => {
 	return (
 		<>
 			<Head>
-				<title>挺哥博客-文章列表</title>
+				<title>Asunarail_Blog-文章列表</title>
 			</Head>
 
 			<>
