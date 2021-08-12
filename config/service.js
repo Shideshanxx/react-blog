@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === "production";
 //   ? "http://47.111.168.36:7001/default/"
 //   : "http://127.0.0.1:7001/default/"; // 区分环境
 
-const ipUrl = "http://127.0.0.1:7001/default/";
+const ipUrl = "http://47.111.168.36:7001/default/";  // 将后端的nginx配置设置成任意origin可访问
 
 let serviceApi = {
   getBannerList: ipUrl + "getBannerList", // 首页轮播图列表
