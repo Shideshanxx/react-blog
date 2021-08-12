@@ -48,10 +48,12 @@ export default class MyApp extends App {
   };
 
   render() {
+    // props中的Component和pageProps是nextjs定义的
     const { Component, pageProps } = this.props;
     return (
       <Provider store={store}>
         <Layout>
+          {/* 展示子组件 */}
           <Component {...pageProps} />
         </Layout>
       </Provider>
