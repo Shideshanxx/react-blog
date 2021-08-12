@@ -3,9 +3,9 @@ import Head from "next/head";
 import Header from "../Header";
 import Footer from "../Footer";
 import Side from "../Side";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { connect } from "react-redux";
-const Aplayer = dynamic(import("../Aplayer"), { ssr: false });
+// const Aplayer = dynamic(import("../Aplayer"), { ssr: false });
 import "./style.less";
 
 const Layout = (props) => {
@@ -24,14 +24,14 @@ const Layout = (props) => {
           {props.children}
           <Side />
           {/* id 是歌单的id */}
-          <Aplayer
+          {/* <Aplayer
             // id={
             //   props.userInfo && props.userInfo.songsId
             //     ? props.userInfo.songsId
             //     : 6654107223
             // }
             id={6654107223}
-          />
+          /> */}
         </div>
         <Footer />
       </div>

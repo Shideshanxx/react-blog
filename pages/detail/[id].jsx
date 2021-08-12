@@ -333,7 +333,7 @@ export async function getServerSideProps(context) {
       method: 'get',
       params: {id: context.query.id}
     }).then((res) => {
-      resolve(res.data[0])
+      resolve(res.data)
     })
   })
 
