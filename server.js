@@ -1,36 +1,25 @@
 const Koa = require('koa')
 const Router = require('koa-router')
 const next = require('next')
-const Redis = require('ioredis')
-const koaBody = require('koa-body')
-const atob = require('atob')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
+
 const handle = app.getRequestHandler()
-
-// 创建redis client
-const redis = new Redis()
-
-// 设置nodejs全局增加一个atob方法
-global.atob = atob
 
 app.prepare().then(() => {
   const server = new Koa()
   const router = new Router()
 
-  server.keys = ['develop Github App']
-
-  server.use(koaBody())
-
-  server.use(router.routes())
-
-  server.use(async (ctx, next) => {
-    ctx.req.session = ctx.session
+  // 对于nextjs打包出来的js、css、图片进行代理（必须）
+  router.get('*', async ctx => {
     await handle(ctx.req, ctx.res)
     ctx.respond = false
   })
 
+  server.use(router.routes())
+
+  // 防止出现控制台报404错误
   server.use(async (ctx, next) => {
     ctx.res.statusCode = 200
     await next()
