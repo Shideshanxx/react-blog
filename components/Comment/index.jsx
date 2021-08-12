@@ -70,7 +70,7 @@ const ReplyEditor = ({ props, hideRplyEditor, qureyComment }) => {
 
 		request(serviceApi.setArticleComment, {
 			method: 'post',
-			credentials: 'include', // 携带cookie
+			// credentials: 'include', // 携带cookie
 			data: {
 				content: value.trim(),
 				commentId: props.id
@@ -387,7 +387,7 @@ class CommentComponent extends React.Component {
 
 		request(serviceApi.setArticleComment, {
 			method: 'post',
-			credentials: 'include', // 携带cookie
+			// credentials: 'include', // 携带cookie
 			data: {
 				content: this.state.value.trim(),
 				articleId: Router.router.query.id
