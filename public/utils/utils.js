@@ -216,3 +216,18 @@ export function jsonp(options) {
     document.body.removeChild(script);
   };
 }
+
+// 判断是否是PC环境
+export function isPC() {
+  // 服务端渲染无法获取到window、navigator、document对象，所以该方法无效
+  var userAgentInfo = navigator.userAgent;
+  var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+  var flag = true;
+  for (var v = 0; v < Agents.length; v++) {
+    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+      flag = false;
+      break;
+    }
+  }
+  return flag;
+}

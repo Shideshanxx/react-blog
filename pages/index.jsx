@@ -57,7 +57,7 @@ const Home = (props) => {
       params: {
         id: tabKey,
         page: page + 1,
-        limit: 5,
+        limit: 6,
       }
     }).then((res) => {
       if (!res.data.length) {
@@ -80,7 +80,7 @@ const Home = (props) => {
       params: {
         id: key,
         page: 1,
-        limit: 5,
+        limit: 6,
       }
     }).then((res) => {
       setArticleList(res ? res.data : [])
@@ -114,7 +114,7 @@ const Home = (props) => {
 
       <>
         <Row className="header-banner-box">
-          <Col xs={0} sm={0} md={24}>
+          <Col xs={24} sm={24} md={24}>
             <div className="header-banner">
               <LazyImg background={true} params="?imageslim" src={topBanner?.url || null} >
                 <div className="header-content">
@@ -260,7 +260,7 @@ export async function getServerSideProps() {
   const promise1 = new Promise((resolve) => {
     request(serviceApi.getArticleList, {
       method: 'get',
-      params: { id: 0, page: 1, limit: 5 }
+      params: { id: 0, page: 1, limit: 6 }
     }).then((res) => {
       resolve(res ? res.data : [])
     })

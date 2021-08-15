@@ -16,9 +16,8 @@
 
     .logo {
       width: 42px;
-      background-color: #fff;
-      border-radius: 5px;
     }
+    
 
     .right-memu {
       background-color: #000;
@@ -129,7 +128,19 @@
 }
 
 
+@media screen and (min-width: @screen-lg + 1) {
+  .footer{
+    display: block;
+  }
+  .xs-menu{
+    display: none;
+  }
+}
+
 @media screen and (max-width: @screen-lg) {
+  .xs-menu{
+    display: block;
+  }
   .footer{
     display: none !important;
   }

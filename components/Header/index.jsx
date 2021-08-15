@@ -520,12 +520,11 @@ const Header = (props) => {
                   <ul className="user-options">
                     <li onClick={() => linkUser(userInfo.userId)}>
                       <UserOutlined /> 个人中心
-                  </li>
+                    </li>
 
                     <li className="user-msg" onClick={() => Router.push(`/msgCenter`)} >
                       <BellOutlined /> 我的信息
-
-                    <span className="msg-num">
+                      <span className="msg-num">
                         <Badge
                           count={msgData && msgData.length}
                           style={{ backgroundColor: 'rgba(245,34,45,.2)', color: 'red', boxShadow: 'none' }}
@@ -535,9 +534,8 @@ const Header = (props) => {
 
                     <li onClick={logout}>
                       <PoweroffOutlined /> 退出
-                  </li>
+                    </li>
                   </ul>
-
                 </div>
               )} >
                 <Badge dot={msgData && msgData.length ? true : false}>
@@ -622,7 +620,6 @@ const Header = (props) => {
 						</div>
           }
           <MenuOutlined style={{ fontSize: 20, marginLeft: 20 }} type="menu" onClick={() => setMuneVisible(true)} />
-
         </div>
 
         {/* 目录 */}

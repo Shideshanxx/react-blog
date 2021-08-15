@@ -124,79 +124,91 @@ const Footer = () => {
     setActive(null);
   };
   return (
-    <footer className="footer" style={{display: hide?"none":"block"}}>
-      <div className="wrap" style={{ display: "flex", justifyContent: 'space-around'}}>
-        <div className="footer-box">
-          <div className="left-logo">
-              <Link href="/">
-                <a>
-                  <img className="logo" src="http://cdn.zjutshideshan.cn/blog/react1.jpg"></img>
-                </a>
-              </Link>
-          </div>
-
-          <div className="right-memu">
-            <div>
-              Copyright © 2021
-              <Link href="/about">
-                <a>Asunarail</a>
-              </Link>
+    <>
+      <footer className="footer" style={{display: hide?"none":"block"}}>
+        <div className="wrap" style={{ display: "flex", justifyContent: 'space-around'}}>
+          <div className="footer-box">
+            <div className="left-logo">
+                <Link href="/">
+                  <a>
+                    <img className="logo" src="http://cdn.zjutshideshan.cn/blog/logo1.png"></img>
+                  </a>
+                </Link>
             </div>
-            <div>
-              <a
-                className="beian-a"
-                target="_blank"
-                href="https://beian.miit.gov.cn/#/Integrated/index"
-              >
-                鄂ICP备19016383号-1
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div className="tools-box">
-          <div className="inner">
-            <div className="tool-list">
-              {toolsData.map((item) => (
+            <div className="right-memu">
+              <div>
+                Copyright © 2021
+                <Link href="/about">
+                  <a>Asunarail</a>
+                </Link>
+              </div>
+              <div>
                 <a
-                  href={item.link}
+                  className="beian-a"
                   target="_blank"
-                  className="tool-item tool-notion1"
-                  data-color="red"
-                  onMouseEnter={() => onMouseEnter(item.id)}
-                  onMouseLeave={onMouseLeave}
-                  key={item.id}
-                  style={{
-                    backgroundColor: `${
-                      active === item.id ? item.bgColor : ""
-                    }`,
-                  }}
+                  href="https://beian.miit.gov.cn/#/Integrated/index"
                 >
-                  <i
-                    className="tool-icon"
-                    style={{
-                      backgroundImage: `url(${
-                        active === item.id ? item.hoverIcon : item.iocn
-                      })`,
-                    }}
-                  />
-                  <div className="tool-desc">
-                    <div className="hide-desc" />
-                    <div
-                      className="inner"
-                      style={item.bgColor === "#fff" ? { color: "#333" } : null}
-                    >
-                      <p className="name">{item.name}</p>
-                      <p className="describe">{item.describe}</p>
-                    </div>
-                  </div>
+                  鄂ICP备19016383号-1
                 </a>
-              ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="tools-box">
+            <div className="inner">
+              <div className="tool-list">
+                {toolsData.map((item) => (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="tool-item tool-notion1"
+                    data-color="red"
+                    onMouseEnter={() => onMouseEnter(item.id)}
+                    onMouseLeave={onMouseLeave}
+                    key={item.id}
+                    style={{
+                      backgroundColor: `${
+                        active === item.id ? item.bgColor : ""
+                      }`,
+                    }}
+                  >
+                    <i
+                      className="tool-icon"
+                      style={{
+                        backgroundImage: `url(${
+                          active === item.id ? item.hoverIcon : item.iocn
+                        })`,
+                      }}
+                    />
+                    <div className="tool-desc">
+                      <div className="hide-desc" />
+                      <div
+                        className="inner"
+                        style={item.bgColor === "#fff" ? { color: "#333" } : null}
+                      >
+                        <p className="name">{item.name}</p>
+                        <p className="describe">{item.describe}</p>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
+      </footer>
+      <div className="xs-menu" id="xs-menu" style={{textAlign: 'center', fontSize: '12px'}}>
+        <div>Copyright © 2021 Asunarail</div>
+        <a
+          className="beian-a"
+          target="_blank"
+          href="https://beian.miit.gov.cn/#/Integrated/index"
+        >
+          鄂ICP备19016383号-1
+        </a>
       </div>
-    </footer>
+    </>
   )
 }
 
