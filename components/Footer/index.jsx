@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import ifBottom from './ifBottom'
+import { ifBottom } from './ifBottom'
 import "./style.less";
 
 const toolsData = [
@@ -104,7 +104,7 @@ const Footer = () => {
   };
 
   const listenScroll = () => {
-    if (ifBottom.ifBottom()) {
+    if (ifBottom) {
       // 到底了
       setHide(false)
     } else {

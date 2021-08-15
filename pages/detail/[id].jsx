@@ -303,7 +303,7 @@ const Detail = (props) => {
 
           {/* 目录 */}
           <Col xs={0} sm={0} md={0} lg={5} xl={5} style={{paddingRight: 10}}>
-            <Affix offsetTop={120}>
+            <Affix offsetTop={80}>
               <div className="detailed-nav comm-box">
                 <div className="nav-title">
                   <ProfileOutlined type="read" style={{marginRight: 10}} /> 目录
